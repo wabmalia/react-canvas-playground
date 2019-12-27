@@ -5,10 +5,11 @@ const CanvasContext = React.createContext()
 const Canvas = ({ children }) => {
     const canvasRef = useRef(null)
     const [context, setContext] = useState()
+
     useEffect(() => {
-        console.log(canvasRef.current.getContext("2d"))
         setContext(canvasRef.current.getContext("2d"))
     }, [])
+
     return (
         <React.Fragment>
             <canvas ref={canvasRef} style={{ outline: "black 1px solid" }} />

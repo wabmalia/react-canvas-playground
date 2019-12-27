@@ -6,6 +6,7 @@ const RectangleWithCanvas = ({
     size = { width: 0, height: 0 },
     border = { size: 1, color: "black" }
 }) => {
+    // canvas.clearRect(0, 0, window.innerHeight, window.innerWidth)
     canvas.beginPath()
     canvas.rect(pos.x, pos.y, size.width, size.height)
     canvas.lineWidth = border.size
